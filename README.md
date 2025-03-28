@@ -2,39 +2,52 @@
 1. Project Description
    
 Descriptive Analysis of Animal Services Business Licenses in Vancouver
+
 2. Project Title
 
 Analyzing Business License Status, Revenue & Workforce in Vancouver's Animal Services Sector
+
 3. Objective
 
 My goal was to analyze the City of Vancouver's Animal Services business license data to identify trends related to license statuses, total fees collected, and workforce size. I built a cloud-based data platform using AWS services to ingest, clean, and summarize this dataset so that stakeholders can make informed decisions based on real insights.
+
 4. Dataset
 
 The dataset was sourced from the City of Vancouver Open Data Catalog. It includes fields such as License Number, Business Name, Business Type, Status, Issued and Expiry Dates, Number of Employees, and Fee Paid. The raw data was uploaded to an S3 bucket: s3://business-raw-aks/licenses/animal-services/year=2025/server=BLGVS-AKS/
+
 5. Methodology
 
 Data Collection and Preparation
+
 ![image](https://github.com/user-attachments/assets/9ada289e-f1e2-4a66-9a1a-1b48671ab0c3)
 
 - Uploaded dataset to S3 with a structured path for scalability.
 - Used AWS Glue DataBrew to create a project and fix CSV delimiter issues by switching to semicolons.
+  
 Data Profiling
+
 - Performed profiling in AWS Glue DataBrew to assess structure and data quality.
 - Identified missing values and irrelevant columns.
 - Ensured proper column separation and type recognition.
+  
 Data Cleaning
+
 ![image](https://github.com/user-attachments/assets/a2f1f551-2e96-4b19-8be4-966dc61aeca1)
 
 - Removed unnecessary columns (Postal Code, Geom, etc.).
 - Dropped rows with NULL or zero in FeePaid and NumberofEmployees.
 - Standardized data types and date formats.
 - Filtered only 'Issued' licenses under Animal Services.
+  
 Data Cataloging
+
 ![image](https://github.com/user-attachments/assets/8c1c36ad-a4dd-488b-b485-c39203986c28)
 
 - Created a Glue database: business-data-catalog-aks.
 - Used Glue Crawler to catalog metadata and partitioned data by Status.
+
 Data Summarization
+
 ![image](https://github.com/user-attachments/assets/cdc1480a-417a-4dcb-880f-71b1afeb8cea)
 
 - Used Athena for SQL queries to calculate:
@@ -42,6 +55,7 @@ Data Summarization
   2. Total licensing revenue.
   3. Average employees per business type.
 - Built ETL pipeline to aggregate and store summaries in the curated S3 bucket.
+  
 6. Tools and Technologies
   
 - Amazon S3 – For raw, transformed, and curated dataset storage
@@ -50,6 +64,7 @@ Data Summarization
 - Amazon Athena – For querying with SQL
 - AWS KMS – For encryption and secure access
 - AWS CloudWatch & CloudTrail – For usage tracking and monitoring
+  
 7. Deliverables
   
 - Cleaned and transformed dataset stored in S3
@@ -58,6 +73,7 @@ Data Summarization
 - Monitoring dashboard in CloudWatch
 - Security and audit logs using KMS and CloudTrail
 - Estimated monthly AWS cost: $4.27 (Yearly: ~$51.24)
+  
 8. Insights and Recommendations
   
 Insights:
