@@ -89,7 +89,9 @@ Recommendations:
 - Explore ML for forecasting license renewals or spotting anomalies.
 
 This project helped me apply AWS tools in a real-world scenario, transforming raw data into valuable business insights.
+
 Certification
+
 	AWS Academy Cloud Foundations – Successfully completed the certification, demonstrating foundational knowledge of cloud computing concepts, AWS core services, security, architecture, and pricing models.
  ![image](https://github.com/user-attachments/assets/57a27f21-2e08-44be-83cb-60702daa1189)
 
