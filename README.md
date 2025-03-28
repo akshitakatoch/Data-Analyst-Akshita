@@ -1,11 +1,15 @@
 # Data-Analyst-Akshita
 Project Description
+
           Descriptive Analysis of Animal Services Business Licenses in Vancouver
  Project Title
+ 
           Analyzing Business License Status, Revenue & Workforce in Vancouver's Animal Services Sector
 Objective
+
           This project aims to build a scalable, cloud-based Data Analytics Platform using AWS services to analyze business license data from Vancouver's Animal Services sector. In order to help city authorities and business planners make data-driven decisions, the main objective is to extract insights regarding licensing statuses, revenue patterns, and workforce distribution.
  Dataset
+ 
           The Open Data Catalog of the City of Vancouver provided the dataset for this project. It includes comprehensive data about companies in the Animal Services industry, such as their staff size, operational status, and licensing details.
 Key attributes in the dataset include
 • LicenceNumber – Unique identifier for each business license
